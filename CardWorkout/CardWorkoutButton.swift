@@ -3,24 +3,24 @@ import UIKit
 class CardWorkoutButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init?(coder: NSCoder) not implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
+    init(color: UIColor, title: String, iconName: String) {
         super.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        setTitle(title, for: .normal)
-        configure()
-    }
-    
-    func configure() {
-        layer.cornerRadius = 14
-        titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
-        setTitleColor(.white, for: .normal)
+        
+        configuration = .filled()
+        configuration?.title = title
+        configuration?.baseForegroundColor = .white
+        configuration?.baseBackgroundColor = color
+        configuration?.cornerStyle = .medium
+        configuration?.image = UIImage(systemName: iconName)
+        configuration?.imagePlacement = .trailing
+        configuration?.imagePadding = 5
+     
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

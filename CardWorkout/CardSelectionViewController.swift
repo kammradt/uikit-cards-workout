@@ -11,9 +11,9 @@ class CardSelectionViewController: UIViewController {
     
     let cardImageView = UIImageView()
     
-    let stopButton = CardWorkoutButton(backgroundColor: .systemRed, title: "Stop!")
-    let resetButton = CardWorkoutButton(backgroundColor: .systemGreen, title: "Reset!")
-    let rulesButton = CardWorkoutButton(backgroundColor: .systemBlue, title: "Rules")
+    let stopButton = CardWorkoutButton(color: .systemRed, title: "Stop!", iconName: "stop.circle")
+    let resetButton = CardWorkoutButton(color: .systemGreen, title: "Reset", iconName: "arrow.clockwise")
+    let rulesButton = CardWorkoutButton(color: .systemBlue, title: "Rules", iconName: "list.bullet")
     
     var cards: [UIImage] = CardDeck.allValues
     var timer: Timer!
@@ -26,7 +26,7 @@ class CardSelectionViewController: UIViewController {
     }
     
     func startTimer() {
-        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
     }
     
     @objc func stopTimer() {
