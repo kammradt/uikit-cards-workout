@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0EF67A2929CDE7006361BF /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EF6792929CDE7006361BF /* RulesViewController.swift */; };
+		3C0EF67C2929D49A006361BF /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EF67B2929D49A006361BF /* CardDeck.swift */; };
 		3CB0FA5529292BBA005F2D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0FA5429292BBA005F2D9A /* AppDelegate.swift */; };
 		3CB0FA5729292BBA005F2D9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0FA5629292BBA005F2D9A /* SceneDelegate.swift */; };
 		3CB0FA5E29292BBB005F2D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB0FA5D29292BBB005F2D9A /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0EF6792929CDE7006361BF /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		3C0EF67B2929D49A006361BF /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 		3CB0FA5129292BBA005F2D9A /* CardWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB0FA5429292BBA005F2D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CB0FA5629292BBA005F2D9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				3CB0FA6229292BBB005F2D9A /* Info.plist */,
 				3CB0FA6829292D5C005F2D9A /* CardSelectionViewController.swift */,
 				3CB0FA6A29292EB0005F2D9A /* CardWorkoutButton.swift */,
+				3C0EF6792929CDE7006361BF /* RulesViewController.swift */,
+				3C0EF67B2929D49A006361BF /* CardDeck.swift */,
 			);
 			path = CardWorkout;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0EF67C2929D49A006361BF /* CardDeck.swift in Sources */,
+				3C0EF67A2929CDE7006361BF /* RulesViewController.swift in Sources */,
 				3CB0FA5529292BBA005F2D9A /* AppDelegate.swift in Sources */,
 				3CB0FA5729292BBA005F2D9A /* SceneDelegate.swift in Sources */,
 				3CB0FA6929292D5C005F2D9A /* CardSelectionViewController.swift in Sources */,

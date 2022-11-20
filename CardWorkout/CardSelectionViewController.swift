@@ -15,10 +15,31 @@ class CardSelectionViewController: UIViewController {
     let resetButton = CardWorkoutButton(backgroundColor: .systemGreen, title: "Reset!")
     let rulesButton = CardWorkoutButton(backgroundColor: .systemBlue, title: "Rules")
     
+    var cards: [UIImage] = CardDeck.allValues
+    var timer: Timer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupUI()
+        startTimer()
+    }
+    
+    func startTimer() {
+        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
+    }
+    
+    @objc func stopTimer() {
+        self.timer.invalidate()
+    }
+    
+    @objc func resetTimer() {
+        stopTimer()
+        startTimer()
+    }
+    
+    @objc func showRandomCard() {
+        cardImageView.image = cards.randomElement()
     }
     
     func setupUI() {
@@ -43,6 +64,7 @@ class CardSelectionViewController: UIViewController {
     
     func setupStopButton() {
         view.addSubview(stopButton)
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             stopButton.widthAnchor.constraint(equalToConstant: 260),
@@ -54,6 +76,7 @@ class CardSelectionViewController: UIViewController {
     
     func setupResetButton() {
         view.addSubview(resetButton)
+        resetButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             resetButton.widthAnchor.constraint(equalToConstant: 115),
@@ -65,6 +88,7 @@ class CardSelectionViewController: UIViewController {
     
     func setupRulesButton() {
         view.addSubview(rulesButton)
+        rulesButton.addTarget(self, action: #selector(goToRulesViewController), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             rulesButton.widthAnchor.constraint(equalToConstant: 115),
@@ -72,6 +96,10 @@ class CardSelectionViewController: UIViewController {
             rulesButton.trailingAnchor.constraint(equalTo: stopButton.trailingAnchor),
             rulesButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20)
         ])
+    }
+    
+    @objc func goToRulesViewController() {
+        present(RulesViewController(), animated: true)
     }
     
 }
