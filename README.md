@@ -5,9 +5,13 @@
   </a>
 </p>
 
-> Learning UIKit, creating some views and buttons around
+> Learning UIKit, creating some views and buttons around. 
+
+> Learning with this course: https://www.youtube.com/watch?v=CwA1VWP0Ldw
 
 ## How it looks 📸
+
+https://user-images.githubusercontent.com/34798570/202921298-235c1d18-e03c-4102-841f-09b63a9ccc4c.mov
 
 
 ## Author👤
